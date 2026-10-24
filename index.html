@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>可解释三维讲解 · 示例</title>
+<style>
+  :root{--bg:#0b1118;--ink:#eef3f7;--ink2:#c3d0da;--ink3:#93a5b3;--line:rgba(170,200,220,.18);--accent:#f18d80;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"PingFang SC",system-ui,sans-serif;
+       min-height:100dvh;display:grid;place-items:center;padding:40px 20px}
+  .wrap{max-width:760px;width:100%}
+  h1{font-family:"Songti SC",Georgia,serif;font-size:26px;letter-spacing:.03em;margin-bottom:8px}
+  .sub{color:var(--ink3);font-size:14px;line-height:1.8;margin-bottom:28px}
+  .card{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:14px;
+        padding:18px 20px;margin-bottom:14px;background:rgba(14,23,32,.65);transition:.18s}
+  .card:hover{border-color:rgba(241,141,128,.5);background:rgba(20,32,44,.9)}
+  .card h2{font-size:17px;font-weight:600;margin-bottom:6px}
+  .card p{font-size:13px;color:var(--ink3);line-height:1.7}
+  .tag{display:inline-block;font-size:11px;color:var(--accent);border:1px solid rgba(241,141,128,.35);
+       border-radius:6px;padding:1px 7px;margin-left:8px;vertical-align:2px}
+  .dl{font-size:12.5px;color:var(--ink3);margin-top:10px}
+  .dl a{color:#8ecde5;text-decoration:none}
+  footer{margin-top:26px;font-size:12px;color:var(--ink3);line-height:1.9}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>可解释三维讲解 · 示例</h1>
+  <p class="sub">每个演示都由一个纯函数 <code>sample(t)</code> 驱动：画面、读数、解说、公式四处同源，
+     并由该学科的判据逐帧校验（物理 ΣF=ma · 深度学习 梯度=有限差分）。</p>
+
+  <a class="card" href="./roadster/">
+    <h2>Tesla Roadster · 特技里的力<span class="tag">物理</span></h2>
+    <p>风扇吸附、倒吊爬坡、空中翻滚。13 台车身共用同一套装备，看质量如何决定成败。</p>
+    <div class="dl">离线单文件：<a href="./roadster-offline.html">roadster-offline.html</a></div>
+  </a>
+
+  <a class="card" href="./gradient-descent/">
+    <h2>梯度下降 · 学习率决定一切<span class="tag">深度学习</span></h2>
+    <p>梯度指向上坡，所以下降要取反。同起点、同规则，只改学习率：收敛 / 震荡 / 发散。</p>
+    <div class="dl">离线单文件：<a href="./gradient-descent-offline.html">gradient-descent-offline.html</a></div>
+  </a>
+
+  <footer>
+    离线单文件可下载后双击打开，不依赖网络 —— 课堂投影与分发用。<br>
+    技术底座：three.js 基础 API + 程序化几何 + 自定义 shader 粒子 + 纯函数运动学。
+  </footer>
+</div>
+</body>
+</html>
